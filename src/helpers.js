@@ -20,5 +20,12 @@ var Helpers = {
     }
 
     return str;
+  },
+  hideClutter: function hideClutter() {
+    var clutter = Array.from(document.getElementsByClassName('clutter'));
+
+    clutter.forEach(function(element) {
+      element.classList.toggle('hidden');
+    });
   }
 };

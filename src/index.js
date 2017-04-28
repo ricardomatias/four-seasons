@@ -126,6 +126,12 @@ sketch.setup(function() {
 			}
 		},
 		{
+			key: 'h',
+			action: function() {
+				Helpers.hideClutter();
+			}
+		},
+		{
 			key: 'Space',
 			action: function() {
 				this.setNewColorScheme();
