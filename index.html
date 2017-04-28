@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>two-seasons</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400" rel="stylesheet">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<button type="button" name="shortcuts" class="btn-shortcuts" onclick="toggleOverlay()">?</button>
+
+	<div class="overlay-container">
+		<div class="overlay hidden">
+			<h3>shortcuts</h3>
+			<div class="inner-overlay">
+				<ul>
+					<li><code>w</code></li>
+					<li><code>s</code></li>
+					<li><code>enter</code></li>
+				</ul>
+				<ul>
+					<li>previous preset</li>
+					<li>next preset</li>
+					<li>take a screenshot</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<a href="http://ricardomatias.net" class="website-link">ricardomatias.net</a>
+
+	<a class="github-link" href="https://github.com/ricardomatias/p5-boilerplate" target="_blank">
+		<img src="assets/img/github-link.png" alt="GitHub Logo">
+	</a>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/p5.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/addons/p5.sound.min.js"></script>
+	<!-- <script src="assets/js/dat.gui.min.js"></script>
+	<script src="assets/js/stats.min.js"></script> -->
+	<script type="text/javascript">
+		function loadScript(file, onLoad) {
+      var scripts = document.getElementsByTagName('script'),
+					lastScript = scripts[scripts.length - 1];
+
+      var newScript = document.createElement('script');
+
+			newScript.src = 'src/' +  file + '.js';
+      lastScript.parentNode.insertBefore(newScript, lastScript);
+
+			newScript.onLoad = onLoad || function() {};
+
+      newScript.onError = function() {
+        console.error('unable to load script: ' + file);
+      }
+    }
+
+		// SCRIPTS TO LOAD
+		[
+			'helpers',
+			'eventBus',
+			'presets-manager',
+			'master-clock',
+			'agent',
+			'bpm-detector',
+			'sketch',
+			'index'
+		].forEach(function(script) {
+		  loadScript(script);
+		});
+	</script>
+</body>
+</html>
