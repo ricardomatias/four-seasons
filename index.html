@@ -45,37 +45,45 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/addons/p5.sound.min.js"></script>
 	<!-- <script src="assets/js/dat.gui.min.js"></script>
 	<script src="assets/js/stats.min.js"></script> -->
-	<script type="text/javascript">
-		function loadScript(file, onLoad) {
-      var scripts = document.getElementsByTagName('script'),
-					lastScript = scripts[scripts.length - 1];
+	<script type="text/javascript" src="src/helpers.js"></script>
+	<script type="text/javascript" src="src/eventBus.js"></script>
+	<script type="text/javascript" src="src/presets-manager.js"></script>
+	<script type="text/javascript" src="src/master-clock.js"></script>
+	<script type="text/javascript" src="src/agent.js"></script>
+	<script type="text/javascript" src="src/bpm-detector.js"></script>
+	<script type="text/javascript" src="src/sketch.js"></script>
+	<script type="text/javascript" src="src/index.js"></script>
+	<!-- <script type="text/javascript">
+		(function() {
+			function loadScript(file, onLoad) {
+				var scripts = document.getElementsByTagName('script'),
+						lastScript = scripts[scripts.length - 1];
 
-      var newScript = document.createElement('script');
+				var newScript = document.createElement('script');
 
-			newScript.src = 'src/' +  file + '.js';
-      lastScript.parentNode.insertBefore(newScript, lastScript);
+				newScript.src = 'src/' +  file + '.js';
+				lastScript.parentNode.insertBefore(newScript, lastScript);
 
-			newScript.onLoad = onLoad || function() {};
+				newScript.onLoad = onLoad || function() {};
 
-      newScript.onError = function() {
-        console.error('unable to load script: ' + file);
-      }
-    }
+				newScript.onError = function() {
+					console.error('unable to load script: ' + file);
+				}
+			}
 
-		// SCRIPTS TO LOAD
-		[
-			'helpers',
-			'eventBus',
-			'presets-manager',
-			'master-clock',
-			'agent',
-			'bpm-detector',
-			'sketch',
-			'index'
-		].forEach(function(script) {
-		  loadScript(script);
-		});
-	</script>
+			// SCRIPTS TO LOAD
+			[
+				'helpers',
+				'eventBus',
+				'presets-manager',
+				'master-clock',
+				'agent',
+				'bpm-detector',
+				'sketch',
+				'index'
+			]
+		})
+	</script> -->
 	<script type="text/javascript">
 		(function() {
 			window.addEventListener('touchstart', function(evt) {
